@@ -107,7 +107,7 @@ class FunctionScore(Query):
 
 QUERIES = (
     # compound queries
-    ('boosting', {'positive': {'type': 'query'}, 'negative': {'type': 'query'}}),
+    ('boosting', {'positive': {'type': 'query'}, 'negative': {'type': 'query', 'multi': True}}),
     ('constant_score', {'query': {'type': 'query'}, 'filter': {'type': 'filter'}}),
     ('dis_max', {'queries': {'type': 'query', 'multi': True}}),
     ('filtered', {'query': {'type': 'query'}, 'filter': {'type': 'filter'}}),
